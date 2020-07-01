@@ -15,14 +15,14 @@ Or simply run `WebsocketFiveInARowApplication.java`
 The application will be running at http://localhost:8091
 
 ### Playing The Game
-In order to play the game, you will need to open 2 browser windows or tabs. 
+In order to play the game, you will need to open 2 browser windows or tabs. <br>
 Both players must click Start Game, and enter their name. 
 
 As the game progresses, the game state messages and rules will appear to each connected user.
 
 ### Details 
-Java application uses Spring Boot Messaging Stomp Web Sockets
-HTML front end using stomp-websockets and sockjs-client
+Java application uses Spring Boot Messaging Stomp Web Sockets. 
+HTML front end using stomp-websockets and sockjs-client JS libs. 
 100% Unit Test Coverage 
 
 ### Issues 
