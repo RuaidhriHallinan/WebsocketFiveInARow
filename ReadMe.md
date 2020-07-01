@@ -10,6 +10,7 @@ first to form a horizontal, vertical, or diagonal line of five of one's own disc
 ```
 mvn spring-boot:run
 ```
+Or simply run `WebsocketFiveInARowApplication.java` 
 
 The application will be running at http://localhost:8091
 
