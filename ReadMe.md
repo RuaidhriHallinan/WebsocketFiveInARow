@@ -25,7 +25,7 @@ HTML front end using stomp-websockets and sockjs-client
 100% Unit Test Coverage 
 
 ### Issues 
-GameControllerIntegrationTest broke after a restart of intelliJ to is ignored. 
+GameControllerIntegrationTest broke after a restart of intelliJ so is ignored. 
 Unknown cause. Unit test coverage still at 100%  
 
 ### Author 
