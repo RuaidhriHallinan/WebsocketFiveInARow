@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Connect Five In A Row</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/main.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/app.js"></script>
+</head>
+<body>
+<noscript><h2 style="color: #ff0000">Seems your browser doesn't support Javascript! Websocket relies on Javascript being
+    enabled. Please enable
+    Javascript and reload this page!</h2></noscript>
+<div id="main-content" class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="connect">Five In A Row</label>
+                    <button id="connect" class="btn btn-default" type="submit">Start Game</button>
+                    <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">End Game</button>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <div id="namePanel" class="col-md-6" style="display: none;">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label for="name">Enter Player Name:</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your name here...">
+                    </div>
+                    <button id="enter" class="btn btn-default" type="submit">Enter</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <table id="conversation" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Game Model</th>
+                </tr>
+                </thead>
+                <tbody id="gameModel">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div id="movePanel" class="col-md-12" style="display: none;">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="makeMove">Make your move (0-9)</label>
+                    <input type="text" id="makeMove" class="form-control" placeholder="(0-9)...">
+                </div>
+                <button id="move" class="btn btn-default" type="submit">Move</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
