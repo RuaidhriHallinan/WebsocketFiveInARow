@@ -6,7 +6,6 @@ import com.gen.fiveinarow.model.GameModel;
 import com.gen.fiveinarow.model.Player;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.MethodSorters;
@@ -19,17 +18,16 @@ import org.springframework.messaging.simp.stomp.StompSessionHandlerAdapter;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
+
 import org.springframework.web.socket.messaging.WebSocketStompClient;
 
 import java.lang.reflect.Type;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
-
 import static java.util.concurrent.TimeUnit.SECONDS;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-@Ignore //TODO This was working up until a restart of intelliJ this morning. Unknown issue as of 23:00.
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @ContextConfiguration(classes = {WebsocketFiveInARowApplication.class, ApplicationTestConfig.class})
@@ -41,11 +39,11 @@ public class GameControllerIntegrationTest {
     private static final String GAME_SEND_MESSAGE = "/app/game";
     private static final String MOVE_SEND_MESSAGE = "/app/move";
     private static String URL;
+
     private int port = 8091;
 
     @Autowired
     private WebSocketStompClient stompClient;
-
     private CompletableFuture<GameModel> completableFuture = new CompletableFuture<>();
     private StompSession stompSession;
 

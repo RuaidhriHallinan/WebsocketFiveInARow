@@ -5,6 +5,9 @@ package com.gen.fiveinarow.model;
  */
 public class GameModel {
 
+    public GameModel() {
+    }
+
     private String message;
 
     public GameModel(String message){
