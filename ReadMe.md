@@ -28,6 +28,9 @@ HTML front end using stomp-websockets and sockjs-client JS libs. <br>
 ### Issues 
 GameControllerIntegrationTest broke after a restart of intelliJ so is ignored. <br>
 Unknown cause. Unit test coverage still at 100%  <br>
+#### * Update *
+GameControllerIntegrationTest now fixed, after adding missing empty constructor for GameModel. <br>
+It seems that SpringBootTest needs the empty constructor when it is initializing and running the tests, and creating the instance via reflection. 
 
 ### Author 
 Ruaidhri Hallinan
